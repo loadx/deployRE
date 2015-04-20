@@ -1,5 +1,14 @@
 source 'https://supermarket.chef.io'
 
+cookbook  'rbenv', git: 'https://github.com/fnichol/chef-rbenv'
+
+upstream_cookbooks = [
+  'iptables',
+  'ruby_build',
+].each do |up_cb|
+  cookbook up_cb
+end
+
 current_dir = File.dirname(__FILE__)
 cookbook_dir = File.join(current_dir, "cookbooks")
 
