@@ -1,0 +1,23 @@
+DEPENDENCIES
+  REA
+    path: cookbooks/REA
+  REA-Sinatra
+    path: cookbooks/REA-Sinatra
+  iptables
+  rbenv
+    git: https://github.com/fnichol/chef-rbenv
+    revision: 0a3018634bafe58ad21c6ee271af015220e444b9
+  ruby_build
+
+GRAPH
+  REA (0.1.0)
+    iptables (>= 0.0.0)
+  REA-Sinatra (0.1.0)
+    rbenv (>= 0.0.0)
+    ruby_build (>= 0.0.0)
+  iptables (1.0.0)
+  java (1.31.0)
+  rbenv (0.7.3)
+    java (> 1.4.0)
+    ruby_build (>= 0.0.0)
+  ruby_build (0.8.0)
